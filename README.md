@@ -1,4 +1,4 @@
-Título do Projeto
+
 Descrição
 O projeto utiliza as APIs da Tabela FIPE e da Car Imagery para fornecer informações atualizadas sobre valores de veículos, bem como imagens de diferentes tipos de veículos, incluindo motos, carros e caminhões. O projeto foi desenvolvido com um novo layout e foi organizado de forma a separar os tipos de veículos em categorias distintas.
 
@@ -9,7 +9,6 @@ Instalação
 Clone o repositório para o seu ambiente local:
 bash
 Copy code
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
 Instale as dependências do projeto:
 Copy code
 npm install
