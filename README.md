@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+Título do Projeto
+Descrição
+O projeto utiliza as APIs da Tabela FIPE e da Car Imagery para fornecer informações atualizadas sobre valores de veículos, bem como imagens de diferentes tipos de veículos, incluindo motos, carros e caminhões. O projeto foi desenvolvido com um novo layout e foi organizado de forma a separar os tipos de veículos em categorias distintas.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Funcionalidades
+Pesquisa de Valores: Os usuários podem pesquisar os valores de diferentes tipos de veículos, incluindo motos, carros e caminhões.
+Visualização de Imagens: Além dos valores, os usuários podem visualizar imagens correspondentes aos diferentes tipos de veículos.
+Instalação
+Clone o repositório para o seu ambiente local:
+bash
+Copy code
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+Instale as dependências do projeto:
+Copy code
+npm install
+Inicie o servidor de desenvolvimento:
+sql
+Copy code
+npm start
+Como Usar
+Na página inicial, selecione o tipo de veículo desejado: motos, carros ou caminhões.
+Preencha os dados necessários, como marca, modelo e ano do veículo.
+Clique no botão de pesquisa para obter os valores correspondentes e visualizar as imagens dos veículos.
+Contribuição
+Contribuições são bem-vindas! Para contribuir com este projeto, siga estas etapas:
 
-## Available Scripts
+Faça um fork do projeto
+Crie uma branch para sua feature (git checkout -b feature/SuaFeature)
+Faça commit das suas alterações (git commit -am 'Adicione sua feature')
+Faça push para a branch (git push origin feature/SuaFeature)
+Abra um Pull Request
+Licença
+Este projeto está licenciado sob a Licença MIT.
 
-In the project directory, you can run:
+Contato
+Se você tiver alguma dúvida ou sugestão em relação ao projeto, entre em contato através do email: alexandremendes381@gmail.com.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
