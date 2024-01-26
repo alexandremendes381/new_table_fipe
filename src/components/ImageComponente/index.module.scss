@@ -1,0 +1,21 @@
+.imagecontainer {
+    width: 299px;
+    height: 201px;
+    border: 2px solid #1C7DE7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img, svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.motoBorder {
+    border-color: #2CD485;
+}
+.truckBorder {
+    border-color: #DD9718;
+}

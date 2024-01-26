@@ -1,0 +1,14 @@
+// Rodape.module.scss
+$cor-rodape: #4285F4;
+
+.rodape {
+  background-color: $cor-rodape;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* Ajuste o valor conforme necessário */
+}

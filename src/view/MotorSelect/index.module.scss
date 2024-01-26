@@ -1,0 +1,96 @@
+$textGreenColor: #2CD485;
+$textPurpleColor: #747CF9;
+$textOrangeColor: #DD9718;
+$textBlueColor: #1C7DE7;
+
+@mixin buttonStyles($bgColor, $borderColor, $hoverBgColor, $hoverBorderColor) {
+    width: 100%;
+    max-width: 254px;
+    height: 48px;
+    margin-top: 20px;
+    padding: 13px 43px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background: $bgColor;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s, background 0.3s, border 0.3s;
+
+    &:hover {
+        border: 1px solid $hoverBorderColor;
+        color: $hoverBorderColor;
+        background: $hoverBgColor;
+    }
+}
+
+.textGreen {
+    color: $textGreenColor;
+}
+
+.ButtonGreen {
+    @include buttonStyles($textGreenColor, transparent, #fff, $textGreenColor);
+}
+
+.textPurple {
+    color: $textPurpleColor;
+}
+
+.ButtonPurple {
+    @include buttonStyles($textPurpleColor, transparent, #fff, $textPurpleColor);
+}
+
+.textOrange {
+    color: $textOrangeColor;
+}
+
+.ButtonOrange {
+    @include buttonStyles($textOrangeColor, transparent, #fff, $textOrangeColor);
+    border-bottom: textOrangeColor; /* Adicione esta linha para remover a borda inferior */
+}
+
+
+.textBlue {
+    color: $textBlueColor;
+}
+
+.ButtonBlue {
+    @include buttonStyles($textBlueColor, transparent, #fff, $textBlueColor);
+}
+
+.quadradosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    justify-content: center;
+    margin-top: -100px;
+}
+
+.quadrado {
+    width: 100%;
+    max-width: 250px;
+    height: 388px;
+    background-color: #fff;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.2s;
+    z-index: 1;
+
+    p {
+        margin: 2px 0;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .quadradosContainer {
+        justify-content: flex-start;
+    }
+}

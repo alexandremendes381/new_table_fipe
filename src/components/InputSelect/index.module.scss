@@ -1,0 +1,54 @@
+// index.module.scss
+$primary-color: #000;
+$secondary-color: #0F9D58;
+
+.inputWrapper {
+  position: static;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    color: $primary-color;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.customSelect {
+  .react-select__control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+
+    &:hover {
+      border-color: #4285F4;
+    }
+  }
+
+  .react-select__menu {
+    .react-select__option {
+      border: none;
+    }
+  }
+
+  .react-select__single-value,
+  .react-select__placeholder {
+    color: #000;
+  }
+
+  .react-select__indicator-separator {
+    display: none;
+  }
+}
+
+.inputHalfWidth {
+  width: 300px; /* Ou qualquer outra largura desejada */
+}
+

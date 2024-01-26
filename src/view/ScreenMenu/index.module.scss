@@ -1,0 +1,31 @@
+.screenContainer {
+    background: #1C7DE7;
+    position: relative;
+    overflow: hidden;
+    min-height: 55vh;
+    border-radius: 0 0 103% 103% / 0 0 30% 30%;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    z-index: 1; /* Aumenta a ordem de empilhamento para que o .content esteja acima do .screenContainer */
+    transform: translateY(10%);
+    background: #1C7DE7; /* Adicione um plano de fundo para cobrir o .screenContainer abaixo */
+
+    /* Ajusta a altura para garantir sobreposição ao .screenContainer */
+    height: calc(100% + 20px); /* A altura total mais o valor de padding */
+    margin-top: -20px; /* Compensa o valor de padding */
+    border-radius: 20px; /* Adiciona borda arredondada a todos os cantos */
+}
+
+.centeredText {
+    text-align: center;
+    color: white;
+    /* Define a cor do texto como branca */
+    margin-bottom: 20px;
+    /* Adiciona um espaço abaixo dos elementos h1 */
+    transform: translateY(-30%); /* Move o elemento para cima mais intensamente */
+}

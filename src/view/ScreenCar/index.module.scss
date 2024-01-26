@@ -1,0 +1,100 @@
+.screenContainer {
+  background: #1C7DE7;
+  position: relative;
+  overflow: hidden;
+  min-height: 55vh;
+  border-radius: 0 0 103% 103% / 0 0 30% 30%;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+  transform: translateY(10%);
+  background: #1C7DE7;
+  height: calc(100% + 20px);
+  margin-top: -20px;
+  border-radius: 20px;
+}
+
+.centeredText {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  transform: translateY(-30%);
+}
+
+.divopen {
+  width: 70%;
+  margin: 15px auto 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.divopen > div {
+  margin-left: 10%;
+  width: 23%;
+}
+
+.divopen InputSelect {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.divopen .ButtonBlue {
+  width: 10px;
+}
+
+.divResultadoContainer {
+  display: flex;
+}
+
+.divResultado {
+  flex: 1;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.tableResultado {
+  width: 101%;
+  border-collapse: collapse;
+}
+
+.tableResultado th,
+.tableResultado td {
+  padding: 6px;
+  border: 1px solid #1C7DE7;
+  white-space: nowrap;
+}
+
+.tableResultado th {
+  background-color: #1C7DE7;
+  color: #ffffff;
+}
+
+.tableResultado td {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.rightAlign {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.buttonWithSize {
+  width: 50px;
+}
