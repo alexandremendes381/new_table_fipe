@@ -1,96 +1,257 @@
-$textGreenColor: #2CD485;
-$textPurpleColor: #747CF9;
-$textOrangeColor: #DD9718;
-$textBlueColor: #1C7DE7;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 
-@mixin buttonStyles($bgColor, $borderColor, $hoverBgColor, $hoverBorderColor) {
-    width: 100%;
-    max-width: 254px;
-    height: 48px;
-    margin-top: 20px;
-    padding: 13px 43px;
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    background: $bgColor;
-    justify-content: center;
-    align-items: center;
-    transition: color 0.3s, background 0.3s, border 0.3s;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
 
+.card {
+    background: var(--white);
+    border-radius: var(--border-radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        transition: var(--transition);
+    }
+    
     &:hover {
-        border: 1px solid $hoverBorderColor;
-        color: $hoverBorderColor;
-        background: $hoverBgColor;
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl);
+    }
+    
+    &.green {
+        &::before {
+            background: var(--primary-green);
+        }
+        
+        &:hover {
+            border-color: var(--primary-green);
+        }
+    }
+    
+    &.purple {
+        &::before {
+            background: var(--primary-purple);
+        }
+        
+        &:hover {
+            border-color: var(--primary-purple);
+        }
+    }
+    
+    &.orange {
+        &::before {
+            background: var(--primary-orange);
+        }
+        
+        &:hover {
+            border-color: var(--primary-orange);
+        }
     }
 }
 
-.textGreen {
-    color: $textGreenColor;
-}
-
-.ButtonGreen {
-    @include buttonStyles($textGreenColor, transparent, #fff, $textGreenColor);
-}
-
-.textPurple {
-    color: $textPurpleColor;
-}
-
-.ButtonPurple {
-    @include buttonStyles($textPurpleColor, transparent, #fff, $textPurpleColor);
-}
-
-.textOrange {
-    color: $textOrangeColor;
-}
-
-.ButtonOrange {
-    @include buttonStyles($textOrangeColor, transparent, #fff, $textOrangeColor);
-    border-bottom: textOrangeColor; /* Adicione esta linha para remover a borda inferior */
-}
-
-
-.textBlue {
-    color: $textBlueColor;
-}
-
-.ButtonBlue {
-    @include buttonStyles($textBlueColor, transparent, #fff, $textBlueColor);
-}
-
-.quadradosContainer {
+.cardHeader {
     display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-    justify-content: center;
-    margin-top: -100px;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.quadrado {
-    width: 100%;
-    max-width: 250px;
-    height: 388px;
-    background-color: #fff;
-    border: 3px solid #ccc;
-    border-radius: 15px;
+.icon {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--gray-900);
+}
+
+.green .title {
+    color: var(--primary-green);
+}
+
+.purple .title {
+    color: var(--primary-purple);
+}
+
+.orange .title {
+    color: var(--primary-orange);
+}
+
+.cardBody {
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+}
+
+.features {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature {
+    display: flex;
     align-items: center;
-    padding: 10px;
-    transition: transform 0.2s;
-    z-index: 1;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    font-weight: 500;
+}
 
-    p {
-        margin: 2px 0;
+.cardFooter {
+    margin-top: auto;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: var(--transition);
+    border: 2px solid;
+    background: transparent;
+    
+    .arrow {
+        transition: var(--transition);
+        font-size: 1.125rem;
     }
-
-    &:hover {
-        transform: translateY(-5px);
+    
+    &:hover .arrow {
+        transform: translateX(4px);
     }
 }
 
-@media screen and (max-width: 768px) {
-    .quadradosContainer {
-        justify-content: flex-start;
+.buttonGreen {
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+    
+    &:hover {
+        background: var(--primary-green);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(44, 212, 133, 0.3);
+    }
+}
+
+.buttonPurple {
+    color: var(--primary-purple);
+    border-color: var(--primary-purple);
+    
+    &:hover {
+        background: var(--primary-purple);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(116, 124, 249, 0.3);
+    }
+}
+
+.buttonOrange {
+    color: var(--primary-orange);
+    border-color: var(--primary-orange);
+    
+    &:hover {
+        background: var(--primary-orange);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(221, 151, 24, 0.3);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .cardHeader {
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .icon {
+        font-size: 2rem;
+    }
+    
+    .title {
+        font-size: 1.25rem;
+    }
+    
+    .description {
+        font-size: 0.9rem;
+    }
+    
+    .button {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .card {
+        padding: 1.25rem;
+    }
+    
+    .cardHeader {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .icon {
+        font-size: 3rem;
+    }
+    
+    .title {
+        font-size: 1.125rem;
     }
 }

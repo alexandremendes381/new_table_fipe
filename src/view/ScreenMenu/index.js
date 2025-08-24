@@ -2,23 +2,36 @@ import React from 'react';
 import styles from './index.module.scss';
 import Header from '../../components/Header';
 import MotorSelect from '../MotorSelect';
+import Rodape from '../../components/Rodape';
 
 function ScreenMenu() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '50px' }}>
-            <div className={styles.screenContainer}>
-                <Header />
-                <div className={styles.content}>
-                    <div className={styles.centeredText}>
-                        <h1>Faça a busca dos valores do seu veículo</h1>
-                        <h1>Rápido e fácil</h1>
-                        <h4>Clique no tipo de veículo que deseja fazer a pesquisa</h4>
+        <div className={styles.pageContainer}>
+            <Header />
+            <main className={styles.mainContent}>
+                <section className={styles.heroSection}>
+                    <div className="container">
+                        <div className={styles.heroContent}>
+                            <h1 className={styles.heroTitle}>
+                                Consulte o valor do seu veículo
+                            </h1>
+                            <h2 className={styles.heroSubtitle}>
+                                Rápido e fácil
+                            </h2>
+                            <p className={styles.heroDescription}>
+                                Escolha o tipo de veículo abaixo para começar sua pesquisa na tabela FIPE
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div>
-                <MotorSelect />
-            </div>
+                </section>
+                
+                <section className={styles.selectionSection}>
+                    <div className="container">
+                        <MotorSelect />
+                    </div>
+                </section>
+            </main>
+            <Rodape />
         </div>
     );
 }

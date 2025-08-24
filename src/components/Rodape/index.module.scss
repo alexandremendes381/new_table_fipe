@@ -1,14 +1,126 @@
-// Rodape.module.scss
-$cor-rodape: #4285F4;
+.footer {
+  background: var(--gray-900);
+  color: var(--white);
+  margin-top: auto;
+}
 
-.rodape {
-  background-color: $cor-rodape;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1; /* Ajuste o valor conforme necessário */
+.footerContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--gray-700);
+}
+
+.footerSection {
+  h4, h5 {
+    margin: 0 0 1rem 0;
+  }
+}
+
+.footerTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 0.75rem;
+}
+
+.footerDescription {
+  color: var(--gray-300);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 300px;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    margin-bottom: 0.5rem;
+    
+    a {
+      color: var(--gray-300);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: var(--transition);
+      
+      &:hover {
+        color: var(--primary-blue);
+      }
+    }
+  }
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright,
+.disclaimer {
+  p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--gray-400);
+  }
+}
+
+.disclaimer p {
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0 1.5rem;
+  }
+  
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .footerDescription {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerContent {
+    padding: 1.5rem 0 1rem;
+    gap: 1.5rem;
+  }
+  
+  .footerTitle {
+    font-size: 1.25rem;
+  }
+  
+  .sectionTitle {
+    font-size: 0.9rem;
+  }
+  
+  .footerLinks li a {
+    font-size: 0.8rem;
+  }
+  
+  .copyright p,
+  .disclaimer p {
+    font-size: 0.8rem;
+  }
 }
